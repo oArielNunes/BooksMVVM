@@ -1,6 +1,6 @@
-package com.renderson.booksmvvm.data
+package data
 
-import com.renderson.booksmvvm.data.model.Book
+import data.model.Book
 
 sealed class BooksResult {
     class Success(val books: List<Book>) : BooksResult()

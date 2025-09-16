@@ -1,10 +1,10 @@
-package com.renderson.booksmvvm.data.repository
+package repository
 
 import androidx.lifecycle.viewModelScope
-import com.renderson.booksmvvm.data.BooksResult
-import com.renderson.booksmvvm.data.NYTServices
-import com.renderson.booksmvvm.data.model.Book
-import com.renderson.booksmvvm.data.response.BookBodyResponse
+import data.BooksResult
+import data.NYTServices
+import data.model.Book
+import data.response.BookBodyResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import retrofit2.Call

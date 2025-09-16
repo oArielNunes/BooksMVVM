@@ -1,11 +1,11 @@
 
-package com.renderson.booksmvvm.presentation.details
+package booksmvvm.presentation.details
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.renderson.booksmvvm.R
-import com.renderson.booksmvvm.presentation.base.BaseActivity
+import booksmvvm.R
+import booksmvvm.presentation.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_books_details.*
 import kotlinx.android.synthetic.main.include_toolbar.*
 

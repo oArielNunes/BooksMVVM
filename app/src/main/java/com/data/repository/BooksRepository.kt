@@ -1,6 +1,6 @@
-package com.renderson.booksmvvm.data.repository
+package repository
 
-import com.renderson.booksmvvm.data.BooksResult
+import BooksResult
 
 interface BooksRepository {
 

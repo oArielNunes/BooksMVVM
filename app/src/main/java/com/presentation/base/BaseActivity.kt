@@ -1,4 +1,4 @@
-package com.renderson.booksmvvm.presentation.base
+package presentation.base
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar

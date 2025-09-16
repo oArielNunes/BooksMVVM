@@ -1,10 +1,10 @@
-package com.renderson.booksmvvm.presentation.books
+package booksmvvm.presentation.books
 
 import androidx.lifecycle.*
-import com.renderson.booksmvvm.R
-import com.renderson.booksmvvm.data.BooksResult
-import com.renderson.booksmvvm.data.model.Book
-import com.renderson.booksmvvm.data.repository.BooksRepository
+import booksmvvm.R
+import data.BooksResult
+import data.model.Book
+import data.repository.BooksRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

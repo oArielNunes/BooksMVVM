@@ -1,4 +1,4 @@
-package com.renderson.booksmvvm.data
+package data
 
 import com.renderson.booksmvvm.data.response.BookBodyResponse
 import retrofit2.Call

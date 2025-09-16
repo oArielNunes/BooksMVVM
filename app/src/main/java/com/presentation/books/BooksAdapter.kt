@@ -1,11 +1,11 @@
-package com.renderson.booksmvvm.presentation.books
+package presentation.books
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.renderson.booksmvvm.R
-import com.renderson.booksmvvm.data.model.Book
+import booksmvvm.R
+import data.model.Book
 import kotlinx.android.synthetic.main.item_book.view.*
 
 class BooksAdapter(

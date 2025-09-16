@@ -1,15 +1,15 @@
-package com.renderson.booksmvvm.presentation.books
+package presentation.books
 
 import android.os.Bundle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.renderson.booksmvvm.R
-import com.renderson.booksmvvm.data.ApiService
-import com.renderson.booksmvvm.data.repository.BooksApiDataSource
-import com.renderson.booksmvvm.presentation.base.BaseActivity
-import com.renderson.booksmvvm.presentation.details.BooksDetailsActivity
+import booksmvvm.R
+import booksmvvm.data.ApiService
+import data.repository.BooksApiDataSource
+import presentation.base.BaseActivity
+import presentation.details.BooksDetailsActivity
 import kotlinx.android.synthetic.main.activity_books.*
 import kotlinx.android.synthetic.main.include_toolbar.*
 

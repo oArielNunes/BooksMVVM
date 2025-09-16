@@ -1,4 +1,4 @@
-package com.renderson.booksmvvm.data.response
+package data.response
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
