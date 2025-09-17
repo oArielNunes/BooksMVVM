@@ -1,6 +1,6 @@
 package data
 
-import com.renderson.booksmvvm.data.response.BookBodyResponse
+import data.response.BookBodyResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
