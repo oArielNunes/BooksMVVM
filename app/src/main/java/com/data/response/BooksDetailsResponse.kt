@@ -1,6 +1,6 @@
 package data.response
 
-import com.renderson.booksmvvm.data.model.Book
+import data.model.Book
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
