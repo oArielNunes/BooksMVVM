@@ -9,6 +9,11 @@ import booksmvvm.presentation.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_books_details.*
 import kotlinx.android.synthetic.main.include_toolbar.*
 
+/**
+ * ACTIVITY DE DETALHES - Exibe informações detalhadas de um livro
+
+ */
+
 class BooksDetailsActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,7 +21,7 @@ class BooksDetailsActivity : BaseActivity() {
         setContentView(R.layout.activity_books_details)
 
         setupToolbar(toolbarMain, R.string.books_details)
-
+        // Obtém dados da Intent
         bookDetailsTitle.text = intent.getStringExtra(EXTRA_TITLE)
         bookDetailsDescription.text = intent.getStringExtra(EXTRA_DESCRIPTION)
     }

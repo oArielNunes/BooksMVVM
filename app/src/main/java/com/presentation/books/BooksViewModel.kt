@@ -10,13 +10,21 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class BooksViewModel(private val dataSource: BooksRepository) : ViewModel() {
+/**
+ * VIEWMODEL - Gerencia dados da UI e sobrevive a mudanças de configuração
+ */
 
+class BooksViewModel(private val dataSource: BooksRepository) : ViewModel() {
+    // LiveData para lista de livros
     private val _booksLiveData = MutableLiveData<List<Book>>()
     val booksLiveData: LiveData<List<Book>> = _booksLiveData
 
+    // LiveData para controle do ViewFlipper (estado da UI)
     val viewFlipperLiveData: MutableLiveData<Pair<Int, Int?>> = MutableLiveData()
 
+    /**
+     * Obtém livros da fonte de dados
+     */
     fun getBooks() {
         CoroutineScope(Dispatchers.IO).launch {
             try {
@@ -50,6 +58,9 @@ class BooksViewModel(private val dataSource: BooksRepository) : ViewModel() {
         }
     }
 
+    /**
+     * Factory pattern para criação do ViewModel com dependências
+     */
     class ViewModelFactory(private val dataSource: BooksRepository) : ViewModelProvider.Factory {
         override fun <T : ViewModel?> create(modelClass: Class<T>): T {
             if (modelClass.isAssignableFrom(BooksViewModel::class.java)) {

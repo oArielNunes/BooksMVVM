@@ -8,6 +8,11 @@ import booksmvvm.R
 import data.model.Book
 import kotlinx.android.synthetic.main.item_book.view.*
 
+
+/**
+ * ADAPTER - Converte dados de livros para Views no RecyclerView
+ */
+
 class BooksAdapter(
     private val books: List<Book>,
     private val onItemClickListener: ((book: Book) -> Unit)
@@ -23,7 +28,9 @@ class BooksAdapter(
     override fun onBindViewHolder(viewHolder: BooksViewHolder, position: Int){
         viewHolder.bindView(books[position])
     }
-
+    /**
+     * VIEWHOLDER - Mantem referências às views para reutilização
+     */
     class BooksViewHolder(
         itemView: View,
         private val onItemClickListener: ((book: Book) -> Unit)

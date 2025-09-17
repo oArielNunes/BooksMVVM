@@ -1,9 +1,14 @@
 package data
 
-import data.response.BookBodyResponse
+import com.data.response.BookBodyResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
+
+/**
+ * INTERFACE RETROFIT - Define endpoints da API NY Times
+ * Configura parâmetros de query e métodos HTTP
+ */
 
 interface NYTServices {
 

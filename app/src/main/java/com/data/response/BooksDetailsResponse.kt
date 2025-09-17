@@ -4,6 +4,10 @@ import data.model.Book
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
+/**
+ * RESPONSE DE DETALHES - Dados específicos de cada livro
+ */
+
 @JsonClass(generateAdapter = true)
 data class BooksDetailsResponse (
     @Json(name = "title")
@@ -13,6 +17,7 @@ data class BooksDetailsResponse (
     @Json(name = "description")
     val description: String
 ) {
+    // Converte response da API para modelo de domínio
     fun getBookModel() = Book(
         title = this.title,
         author = this.author,

@@ -13,6 +13,10 @@ import presentation.details.BooksDetailsActivity
 import kotlinx.android.synthetic.main.activity_books.*
 import kotlinx.android.synthetic.main.include_toolbar.*
 
+/**
+ * ACTIVITY PRINCIPAL - Exibe lista de livros
+ */
+
 class BooksActivity : BaseActivity() {
 
     private lateinit var viewModel: BooksViewModel
@@ -22,12 +26,12 @@ class BooksActivity : BaseActivity() {
         setContentView(R.layout.activity_books)
 
         setupToolbar(toolbarMain, R.string.books_title)
-
+        // Configuração pull-to-refresh
         refreshLayout.setColorSchemeResources(R.color.colorAccent)
         refreshLayout.setOnRefreshListener {
             viewModel.getBooks()
         }
-
+        // Inicializa ViewModel com Factory
         viewModel = ViewModelProvider(
             viewModelStore,
             BooksViewModel.ViewModelFactory(
@@ -36,11 +40,11 @@ class BooksActivity : BaseActivity() {
                 )
             )
         ).get(BooksViewModel::class.java)
-
+        // Carrega dados apenas na primeira criação
         if (savedInstanceState == null) {
             viewModel.getBooks()
         }
-
+        // Observa mudanças na lista de livros
         viewModel.booksLiveData.observe(this, Observer {
             it?.let { books ->
                 with(recyclerBooks) {
@@ -58,7 +62,7 @@ class BooksActivity : BaseActivity() {
                 }
             }
         })
-
+        // Observa mudanças de estado da UI
         viewModel.viewFlipperLiveData.observe(this, Observer {
             it?.let { viewFlipper ->
             refreshLayout.isRefreshing = false
